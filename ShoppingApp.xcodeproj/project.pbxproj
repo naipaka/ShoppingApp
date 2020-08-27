@@ -15,6 +15,10 @@
 		7E92019824F783FD0009A15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E92019624F783FD0009A15D /* LaunchScreen.storyboard */; };
 		7E9201A324F783FD0009A15D /* ShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9201A224F783FD0009A15D /* ShoppingAppTests.swift */; };
 		7E9201AE24F783FD0009A15D /* ShoppingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9201AD24F783FD0009A15D /* ShoppingAppUITests.swift */; };
+		7E9201BE24F78A820009A15D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BC24F78A820009A15D /* RxCocoa.framework */; };
+		7E9201BF24F78A820009A15D /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BC24F78A820009A15D /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E9201C024F78A820009A15D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BD24F78A820009A15D /* RxSwift.framework */; };
+		7E9201C124F78A820009A15D /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BD24F78A820009A15D /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7E9201C224F78A820009A15D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7E9201C124F78A820009A15D /* RxSwift.framework in Embed Frameworks */,
+				7E9201BF24F78A820009A15D /* RxCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7E92018824F783FB0009A15D /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E92018B24F783FB0009A15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,8 @@
 		7E9201A924F783FD0009A15D /* ShoppingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9201AD24F783FD0009A15D /* ShoppingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppUITests.swift; sourceTree = "<group>"; };
 		7E9201AF24F783FD0009A15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E9201BC24F78A820009A15D /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		7E9201BD24F78A820009A15D /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9201C024F78A820009A15D /* RxSwift.framework in Frameworks */,
+				7E9201BE24F78A820009A15D /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +106,7 @@
 				7E9201A124F783FD0009A15D /* ShoppingAppTests */,
 				7E9201AC24F783FD0009A15D /* ShoppingAppUITests */,
 				7E92018924F783FB0009A15D /* Products */,
+				7E9201BB24F78A820009A15D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +152,15 @@
 			path = ShoppingAppUITests;
 			sourceTree = "<group>";
 		};
+		7E9201BB24F78A820009A15D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E9201BC24F78A820009A15D /* RxCocoa.framework */,
+				7E9201BD24F78A820009A15D /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +171,7 @@
 				7E92018424F783FB0009A15D /* Sources */,
 				7E92018524F783FB0009A15D /* Frameworks */,
 				7E92018624F783FB0009A15D /* Resources */,
+				7E9201C224F78A820009A15D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,6 +470,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NA4GG5YL9W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +492,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NA4GG5YL9W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
