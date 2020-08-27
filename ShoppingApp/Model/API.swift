@@ -7,20 +7,22 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol APIRequest {
     associatedtype Response
+    var path: String { get }
 }
 
 protocol APIClient {
-    func response<R: APIRequest>(
-        from request: R,
-        completion: ((R.Response) -> ())?
-    )
+    func response<Request: APIRequest>(from request: Request) -> Observable<Request.Response>
 }
 
-class SomeAPIClient {
-    func request() {
-
+enum API {
+    struct ItemListRequest: APIRequest {
+        typealias Response = [Item]
+        var path: String {
+            return "items/list"
+        }
     }
 }
