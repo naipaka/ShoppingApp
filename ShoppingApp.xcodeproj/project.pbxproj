@@ -19,6 +19,8 @@
 		7E9201BF24F78A820009A15D /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BC24F78A820009A15D /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E9201C024F78A820009A15D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BD24F78A820009A15D /* RxSwift.framework */; };
 		7E9201C124F78A820009A15D /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9201BD24F78A820009A15D /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E9201C824F799240009A15D /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9201C724F799240009A15D /* Injectable.swift */; };
+		7E9201CA24F79AF50009A15D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9201C924F79AF50009A15D /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		7E9201AF24F783FD0009A15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9201BC24F78A820009A15D /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		7E9201BD24F78A820009A15D /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		7E9201C724F799240009A15D /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		7E9201C924F79AF50009A15D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		7E9201C324F798560009A15D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E9201C924F79AF50009A15D /* API.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		7E9201C624F7987F0009A15D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				7E9201C724F799240009A15D /* Injectable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -325,9 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9201C824F799240009A15D /* Injectable.swift in Sources */,
 				7E92019024F783FB0009A15D /* ViewController.swift in Sources */,
 				7E92018C24F783FB0009A15D /* AppDelegate.swift in Sources */,
 				7E92018E24F783FB0009A15D /* SceneDelegate.swift in Sources */,
+				7E9201CA24F79AF50009A15D /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
