@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EUl-c1-q0Y" customClass="CartHeaderView" customModule="ShoppingAppForiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計金額: -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-zR-6bl">
+                    <rect key="frame" x="15" y="0.0" width="345" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="YEY-DN-orD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9hF-zR-6bl" firstAttribute="top" secondItem="EUl-c1-q0Y" secondAttribute="top" id="13M-a6-1TK"/>
+                <constraint firstItem="9hF-zR-6bl" firstAttribute="centerY" secondItem="EUl-c1-q0Y" secondAttribute="centerY" id="APx-aF-syt"/>
+                <constraint firstItem="9hF-zR-6bl" firstAttribute="leading" secondItem="30B-lz-FLD" secondAttribute="leading" constant="15" id="G0J-tz-N1g"/>
+                <constraint firstItem="9hF-zR-6bl" firstAttribute="bottom" secondItem="30B-lz-FLD" secondAttribute="bottom" id="eq0-bo-Shm"/>
+                <constraint firstItem="30B-lz-FLD" firstAttribute="trailing" secondItem="9hF-zR-6bl" secondAttribute="trailing" constant="15" id="hdl-KJ-fak"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="30B-lz-FLD"/>
+            <point key="canvasLocation" x="75" y="137"/>
+        </view>
+    </objects>
+</document>

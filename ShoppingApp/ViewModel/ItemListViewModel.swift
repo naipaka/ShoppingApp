@@ -17,12 +17,13 @@ final class ItemListViewModel: Injectable {
 
     private let viewWillAppearStream = PublishSubject<()>()
     private let cartButtonDidTapStream = PublishSubject<()>()
+    private let addItemDidTapStream = PublishSubject<Item>()
     private let itemsStream = BehaviorSubject<[Item]>(value: [])
     private let navigateToCartStream = PublishSubject<()>()
 
     private let disposeBag = DisposeBag()
 
-    // MARK: Injectable
+    // MARK: - Injectable
     init(with dependency: Dependency) {
         // APIクライアントをDIパターンを利用して取得
         let apiClient = dependency.apiClient
@@ -41,7 +42,7 @@ final class ItemListViewModel: Injectable {
     }
 }
 
-// MARK: Input
+// MARK: - Input
 extension ItemListViewModel {
     var viewWillAppear: AnyObserver<()> {
         return viewWillAppearStream.asObserver()
@@ -50,10 +51,22 @@ extension ItemListViewModel {
     var carButtonDidTap: AnyObserver<()> {
         return cartButtonDidTapStream.asObserver()
     }
+
+    var addButtonDidTap: AnyObserver<Item> {
+        return addItemDidTapStream.asObserver()
+    }
 }
 
-// MARK: Output
+// MARK: - Output
 extension ItemListViewModel {
+    var title: Observable<String> {
+        return Observable.just("商品リスト")
+    }
+
+    var cartButtonTitle: Observable<String> {
+        return Observable.just("カート")
+    }
+
     var items: Observable<[Item]> {
         return itemsStream.asObservable()
     }
